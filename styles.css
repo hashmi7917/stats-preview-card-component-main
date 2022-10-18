@@ -14,10 +14,12 @@
   --secondary-font: "Lexend Deca", sans-serif;
 }
 
-/*desktop preview 400 x 1002 */
+/*desktop preview 445 x 1010 */
 /* mobile 330 x 950 */
 
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -189,7 +191,7 @@ p {
 
 /* dektop - laptop screen*/
 
-@media only screen and (min-width: 800px) and (max-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 3000px) {
   .container {
     display: flex;
     justify-content: center;
@@ -200,35 +202,119 @@ p {
   .card-content {
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-start;
+    align-items: center;
     border-radius: 20px;
+    width: 100%;
+    max-width: 1010px;
+    max-height: 450px;
+    box-shadow: rgba(158, 15, 215, 0.08) 0px 50px 100px -20px,
+      rgba(26, 14, 250, 0.051) 0px 30px 60px -30px;
   }
 
   .card-info {
-    width: 100%;
-    max-width: 450px;
+    width: 50%;
+    max-width: 580px;
+    text-align: left;
+    align-items: flex-start;
+    /* padding: 0 0; */
+    padding-left: 6rem;
+    padding-right: 5rem;
   }
 
   .color-overlay {
     width: 100%;
-    min-width: 450px;
+    min-width: 500px;
     border-radius: 0 10px 10px 0;
   }
 
   .card-image {
-    width: 100%;
-    max-width: 550px;
-    max-height: 100%;
+    width: 50%;
+    max-width: 500px;
+    max-height: inherit;
     background-image: url(./images/image-header-mobile.jpg);
-    aspect-ratio: 12 / 12;
+    /* aspect-ratio: 12 / 12; */
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit: cover;
     border-radius: 0 10px 10px 0;
   }
 
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .main-paragraph {
+    width: 100%;
+    max-width: 400px;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    line-height: 1.8;
+  }
+
   .stats {
+    width: 1005;
     display: flex;
     flex-direction: row;
+    max-width: 450px;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+
+  .stats h4 {
+    font-size: 2.5rem;
+  }
+  .stats p {
+    font-size: 1.5rem;
+  }
+
+  .stats div {
+    padding: 0 0;
+    padding-right: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 800px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-info {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .card-image {
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-image img {
+    border-radius: 20px;
+    background-size: cover;
+    aspect-ratio: 12 / 12;
+  }
+
+  .color-overlay {
+    border-radius: 20px 20px 0 0;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .main-paragraph {
+    max-width: 500px;
+    font-size: 2rem;
+  }
+  .stats h4 {
+    font-size: 3rem;
+  }
+
+  .stats p {
+    font-size: 1.8rem;
   }
 }
