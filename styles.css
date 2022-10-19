@@ -14,9 +14,6 @@
   --secondary-font: "Lexend Deca", sans-serif;
 }
 
-/*desktop preview 445 x 1010 */
-/* mobile 330 x 950 */
-
 *,
 ::before,
 ::after {
@@ -144,6 +141,7 @@ p {
 }
 
 .stats p {
+  font-family: var(--secondary-font);
   color: var(--stat-headings);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -172,20 +170,20 @@ p {
   h1 {
     width: 100%;
     min-width: 400px;
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
   .main-paragraph {
     width: 100%;
     min-width: 350px;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .stats h4 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .stats p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -207,8 +205,7 @@ p {
     width: 100%;
     max-width: 1010px;
     max-height: 450px;
-    box-shadow: rgba(158, 15, 215, 0.08) 0px 50px 100px -20px,
-      rgba(26, 14, 250, 0.051) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   }
 
   .card-info {
@@ -236,6 +233,29 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0 10px 10px 0;
+  }
+
+  /* hover animation */
+  /* animation */
+  @-webkit-keyframes flash {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  @keyframes flash {
+    0% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 1;
+    }
+  }
+
+  .card-image:hover {
+    animation: flash 1.5s;
   }
 
   h1 {
